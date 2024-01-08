@@ -14,7 +14,7 @@ def index():
 # Endpoint to display data of all the stars
 @app.route('/stars')
 def get_all_stars():
-    planet_name = request.args.get('star_name') 
+    planet_name = request.args.get('Star_name') 
     planet_data = next(item for item in data if item['star_name']==planet_name)
 
     return jsonify({
